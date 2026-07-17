@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Workout Roulette (نوّع / Mixify)</title>
+    <meta name="description" content="Official Privacy Policy for Workout Roulette (نوّع / Mixify), an offline-first bilingual fitness application on Google Play.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0d0f12;
+            --bg-secondary: #16191f;
+            --bg-card: #1e222b;
+            --accent-primary: #ff5252;
+            --accent-gradient: linear-gradient(135deg, #ff5252 0%, #ff7a00 100%);
+            --text-primary: #f5f6f8;
+            --text-secondary: #a0a6b2;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --text-primary: #1a1d20;
+            --text-secondary: #5a6068;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            transition: var(--transition);
+        }
+
+        html[lang="ar"] body {
+            font-family: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            background: rgba(22, 25, 31, 0.85);
+        }
+
+        [data-theme="light"] header {
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .brand-badge {
+            background: var(--accent-gradient);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            transform: translateY(-1px);
+        }
+
+        .btn-accent {
+            background: var(--accent-gradient);
+            color: #fff;
+            border: none;
+        }
+
+        .btn-accent:hover {
+            color: #fff;
+            box-shadow: 0 6px 16px rgba(255, 82, 82, 0.35);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+            padding: 40px 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at top, rgba(255, 82, 82, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meta-tags {
+            display: inline-flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .tag {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .section-card h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .section-icon {
+            color: var(--accent-primary);
+            font-size: 1.5rem;
+        }
+
+        p, ul {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        html[lang="ar"] ul {
+            padding-left: 0;
+            padding-right: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: rgba(255, 82, 82, 0.06);
+            border-left: 4px solid var(--accent-primary);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            color: var(--text-primary);
+        }
+
+        html[lang="ar"] .highlight-box {
+            border-left: none;
+            border-right: 4px solid var(--accent-primary);
+            border-radius: 8px 0 0 8px;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .section-card { padding: 20px; }
+            .nav-container { flex-direction: column; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <a href="#" class="brand">
+            <div class="brand-badge">WR</div>
+            <span>Workout Roulette</span>
+        </a>
+        <div class="controls">
+            <button class="btn" id="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span> <span id="theme-label">Dark</span>
+            </button>
+            <button class="btn btn-accent" id="lang-toggle" onclick="toggleLanguage()">
+                🌐 العربية / English
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- ENGLISH CONTENT -->
+    <div id="en-content" class="lang-content active">
+        <div class="hero">
+            <h1>Privacy Policy & Data Transparency</h1>
+            <p>We believe fitness tracking should be private, fast, and entirely under your control.</p>
+            <div class="meta-tags">
+                <span class="tag">📱 App: Workout Roulette (com.saedcsoftware.WorkoutRoulette)</span>
+                <span class="tag">📅 Last Updated: July 17, 2026</span>
+                <span class="tag">⚡ Offline-First Architecture</span>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">📌</span> 1. Overview & Commitment to Privacy</h2>
+            <p>At <strong>Workout Roulette</strong> ("we", "our", or "us"), your privacy is our core priority. We designed Workout Roulette (also known as <em>نوّع / Mixify</em>) as an <strong>offline-first Android application</strong>. This means that your workout routines, custom exercises, training logs, and preferences are stored locally on your device by default, without requiring third-party accounts or intrusive tracking.</p>
+            <p>This Privacy Policy explains how data is handled within the application, specifically detailing our integration with Android Health Connect, optional Google Drive cloud backups, and basic app diagnostics.</p>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">❤️</span> 2. Android Health Connect Integration</h2>
+            <p>Workout Roulette supports integration with <strong>Android Health Connect</strong> (`android.permission.health.WRITE_EXERCISE`) to allow you to sync your completed workouts directly into your device's centralized health ecosystem.</p>
+            
+            <div class="highlight-box">
+                <strong>Strict Health Data Guarantee & Limited Use Compliance:</strong><br>
+                • We request permission <em>exclusively</em> to write and update completed exercise sessions (`WRITE_EXERCISE`) to Health Connect.<br>
+                • We <strong>do not read, collect, store on external servers, sell, or share</strong> your health or fitness data with third parties, advertisers, or data brokers.<br>
+                • The use of information received from Health Connect adheres strictly to the <a href="https://support.google.com/googleplay/android-developer/answer/9888170" target="_blank" style="color: var(--accent-primary);">Google Play Limited Use Policy</a>, including the Limited Use requirements.
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">☁️</span> 3. Google Drive Cloud Backup (Optional)</h2>
+            <p>To help you safeguard your training progress across device upgrades or factory resets, Workout Roulette offers an optional **Cloud Backup & Restore** feature using your personal Google Account.</p>
+            <ul>
+                <li><strong>Scope Used (`drive.appdata`):</strong> When you opt into cloud backup, Workout Roulette requests access exclusively to the private Application Data folder inside your Google Drive (`https://www.googleapis.com/auth/drive.appdata`).</li>
+                <li><strong>Complete Data Isolation:</strong> This dedicated folder is isolated from the rest of your Drive. Our app <strong>cannot see, access, or modify</strong> your personal documents, photos, videos, or other Drive files.</li>
+                <li><strong>No Developer Access:</strong> Your backup files reside solely in your personal Google Drive storage. Our development team has zero access to your Google credentials or your backup files.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">💾</span> 4. Local Data Storage & User Control</h2>
+            <p>Because Workout Roulette operates on an offline-first architecture:</p>
+            <ul>
+                <li><strong>Local Database (Room & DataStore):</strong> Your workout logs, custom timers, exercise history, and category preferences are saved directly inside the app's private sandbox on your phone.</li>
+                <li><strong>Data Deletion:</strong> You have complete ownership of your data. You can delete your entire workout history instantly at any time by clearing the app data (`Settings → Clear App Data` or inside Android System Settings for the app) or by uninstalling the application.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">📊</span> 5. Analytics & Diagnostic Data</h2>
+            <p>To ensure app stability and continuously improve user experience, we integrate **Google Firebase Analytics** to collect anonymous, non-personally identifiable technical telemetry:</p>
+            <ul>
+                <li><strong>What may be collected:</strong> Device model, Android operating system version, app version, general feature interaction statistics (e.g., how often the roulette spin is used), and anonymous crash reports.</li>
+                <li><strong>No Identifiable Data:</strong> These metrics do not include your name, email, specific workout notes, or any health metrics.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">🛡️</span> 6. Children's Privacy</h2>
+            <p>Our application is designed for general fitness enthusiasts. We do not knowingly collect personal or health information from children under the age of 13. If you believe any child data has been recorded inadvertently on a local device, it can be completely wiped by clearing the app data.</p>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">📬</span> 7. Contact Us & Policy Updates</h2>
+            <p>We may update this Privacy Policy periodically to reflect new features or regulatory requirements. Any modifications will be posted directly on this page with an updated revision date.</p>
+            <p>If you have any questions, feedback, or concerns regarding your privacy or data practices in Workout Roulette, please reach out to our engineering and support team:</p>
+            <div class="highlight-box">
+                <strong>Developer Contact:</strong> <a href="mailto:saedcsoftware@gmail.com" style="color: var(--accent-primary); text-decoration: none; font-weight: 600;">saedcsoftware@gmail.com</a><br>
+                <strong>Package Name:</strong> com.saedcsoftware.WorkoutRoulette
+            </div>
+        </div>
+    </div>
+
+    <!-- ARABIC CONTENT -->
+    <div id="ar-content" class="lang-content">
+        <div class="hero">
+            <h1>سياسة الخصوصية والشفافية</h1>
+            <p>نؤمن بأن تتبع لياقتك البدنية يجب أن يكون خاصاً وسريعاً وتحت سيطرتك الكاملة.</p>
+            <div class="meta-tags">
+                <span class="tag">📱 التطبيق: Workout Roulette (نوّع / Mixify)</span>
+                <span class="tag">📅 آخر تحديث: 17 يوليو 2026</span>
+                <span class="tag">⚡ يعمل بدون إنترنت (Offline-First)</span>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">📌</span> 1. نظرة عامة والتزامنا بالخصوصية</h2>
+            <p>في <strong>Workout Roulette</strong> ("نحن" أو "تطبيقنا")، تُعد خصوصيتك أولويتنا القصوى. لقد قمنا بتصميم تطبيق Workout Roulette (المعروف أيضاً باسم <em>نوّع / Mixify</em>) ليكون <strong>تطبيقاً يعتمد على التخزين المحلي أولاً (Offline-First)</strong>. هذا يعني أن روتينات التمارين، الجلسات المخصصة، سجلات التدريب، والإعدادات الخاصة بك يتم حفظها محلياً على جهازك بشكل افتراضي، دون الحاجة لإنشاء حسابات خارجية أو تتبع تطفلي.</p>
+            <p>توضح سياسة الخصوصية هذه كيفية التعامل مع البيانات داخل التطبيق، وبالأخص تكاملنا مع خدمة Android Health Connect، والنسخ الاحتياطي السحابي الاختياري عبر Google Drive، والتشخيصات الأساسية للتطبيق.</p>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">❤️</span> 2. التكامل مع Health Connect</h2>
+            <p>يدعم تطبيق Workout Roulette الربط مع خدمة <strong>Android Health Connect</strong> (`android.permission.health.WRITE_EXERCISE`) للسماح لك بمزامنة تمارينك المكتملة مباشرة مع المنظومة الصحية المركزية بجهازك.</p>
+            
+            <div class="highlight-box">
+                <strong>ضمان صارم لبيانات اللياقة والامتثال لسياسة الاستخدام المحدود:</strong><br>
+                • نحن نطلب الصلاحية <em>فقط وحصرياً</em> لكتابة وتحديث جلسات التمارين المنجزة (`WRITE_EXERCISE`) في Health Connect.<br>
+                • نحن <strong>لا نقرأ، أو نجمع، أو نخزن على خوادم خارجية، أو نبيع، أو نشارك</strong> بياناتك الصحية والرياضية مع أي أطراف ثالثة أو معلنين أو وسطاء بيانات.<br>
+                • يخضع استخدام المعلومات المستلمة من Health Connect التزاماً تاماً بـ <a href="https://support.google.com/googleplay/android-developer/answer/9888170" target="_blank" style="color: var(--accent-primary);">سياسة الاستخدام المحدود لـ Google Play</a>، بما في ذلك متطلبات الاستخدام المحدود (Limited Use requirements).
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">☁️</span> 3. النسخ الاحتياطي عبر Google Drive (اختياري)</h2>
+            <p>لمساعدتك في حماية سجل تدريباتك عند ترقية جهازك أو إعادة ضبطه، يوفر تطبيق Workout Roulette ميزة **النسخ الاحتياطي والاستعادة السحابية** الاختيارية باستخدام حساب Google الشخصي الخاص بك.</p>
+            <ul>
+                <li><strong>النطاق المستخدم (`drive.appdata`):</strong> عند تفعيلك للنسخ الاحتياطي السحابي، يطلب التطبيق الوصول حصرياً إلى مجلد بيانات التطبيقات المخفي والخاص داخل حساب Google Drive الخاص بك (`https://www.googleapis.com/auth/drive.appdata`).</li>
+                <li><strong>عزل تام للبيانات:</strong> هذا المجلد معزول تماماً عن بقية ملفاتك في Drive. تطبيقنا <strong>لا يمكنه رؤية أو الوصول أو تعديل</strong> أي ملفات أو مستندات أو صور أو فيديوهات شخصية أخرى.</li>
+                <li><strong>عدم وصول المطورين:</strong> تظل ملفات النسخ الاحتياطي مخزنة حصرياً في مساحة Google Drive الشخصية بك. لا يمتلك فريق التطوير أي وصول إلى بيانات اعتماد Google أو ملفاتك الاحتياطية.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">💾</span> 4. التخزين المحلي والتحكم الكامل</h2>
+            <p>بما أن تطبيق Workout Roulette مصمم بالاعتماد على التخزين المحلي أولاً:</p>
+            <ul>
+                <li><strong>قواعد البيانات المحلية (Room & DataStore):</strong> يتم حفظ سجلات التمارين، المؤقتات، تاريخ التدريب، وتفضيلات الفئات مباشرة داخل المساحة المعزولة والآمنة للتطبيق على هاتفك.</li>
+                <li><strong>حذف البيانات:</strong> أنت تمتلك بياناتك بالكامل. يمكنك حذف جميع سجلات تمارينك فوراً في أي وقت عن طريق مسح بيانات التطبيق (`الإعدادات ← مسح بيانات التطبيق` أو من إعدادات نظام Android) أو عند إزالة تثبيت التطبيق.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">📊</span> 5. التحليلات وبيانات التشخيص</h2>
+            <p>لضمان استقرار التطبيق والتحسين المستمر لتجربة المستخدم، نستخدم خدمة **Google Firebase Analytics** لجمع بيانات إحصائية وتقنية مجهولة المصدر وغير محددة للهوية:</p>
+            <ul>
+                <li><strong>ما قد يتم جمعه:</strong> طراز الجهاز، إصدار نظام تشغيل Android، رقم إصدار التطبيق، إحصاءات عامة حول التفاعل مع الميزات (مثل معدل استخدام عجلة الروليت)، وتقارير الأعطال المجهولة.</li>
+                <li><strong>لا توجد بيانات شخصية:</strong> هذه التحليلات لا تتضمن اسمك، أو بريدك الإلكتروني، أو ملاحظاتك الشخصية، أو أي معلومات صحية.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">🛡️</span> 6. خصوصية الأطفال</h2>
+            <p>تطبيقنا مصمم لعشاق اللياقة البدنية بشكل عام، ونحن لا نجمع عن قصد أي معلومات شخصية أو صحية من الأطفال الذين تقل أعمارهم عن 13 عاماً. إذا تم تسجيل أي بيانات محلية لطفل عن طريق الخطأ على الجهاز، يمكن مسحها كلياً وفوراً عن طريق إعادة ضبط أو مسح بيانات التطبيق محلياً.</p>
+        </div>
+
+        <div class="section-card">
+            <h2><span class="section-icon">📬</span> 7. التواصل معنا وتحديثات السياسة</h2>
+            <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس الميزات الجديدة أو المتطلبات التنظيمية. سيتم نشر أي تعديلات مباشرة على هذه الصفحة مع تحديد تاريخ آخر مراجعة أعلى الصفحة.</p>
+            <p>إذا كانت لديك أي أسئلة، أو ملاحظات، أو استفسارات بخصوص خصوصيتك أو ممارسات البيانات في تطبيق Workout Roulette، يُرجى التواصل مع فريق التطوير والدعم الفني:</p>
+            <div class="highlight-box">
+                <strong>البريد الإلكتروني للدعم والمطورين:</strong> <a href="mailto:saedcsoftware@gmail.com" style="color: var(--accent-primary); text-decoration: none; font-weight: 600;">saedcsoftware@gmail.com</a><br>
+                <strong>اسم الحزمة (Package Name):</strong> com.saedcsoftware.WorkoutRoulette
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 saedcsoftware (Workout Roulette / نوّع / Mixify). All rights reserved.</p>
+    <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.7;">Made for clean, privacy-focused fitness training without limits.</p>
+</footer>
+
+<script>
+    let currentLang = 'en';
+    let currentTheme = 'dark';
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'en' ? 'ar' : 'en';
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+        if (currentLang === 'ar') {
+            document.getElementById('en-content').classList.remove('active');
+            document.getElementById('ar-content').classList.add('active');
+            document.getElementById('lang-toggle').innerText = '🌐 English / العربية';
+        } else {
+            document.getElementById('ar-content').classList.remove('active');
+            document.getElementById('en-content').classList.add('active');
+            document.getElementById('lang-toggle').innerText = '🌐 العربية / English';
+        }
+        localStorage.setItem('wr_policy_lang', currentLang);
+    }
+
+    function toggleTheme() {
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        document.getElementById('theme-icon').innerText = currentTheme === 'dark' ? '🌙' : '☀️';
+        document.getElementById('theme-label').innerText = currentTheme === 'dark' ? 'Dark' : 'Light';
+        localStorage.setItem('wr_policy_theme', currentTheme);
+    }
+
+    // Initialize from browser settings or stored state
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('wr_policy_lang') || (navigator.language.startsWith('ar') ? 'ar' : 'en');
+        if (savedLang === 'ar') {
+            currentLang = 'en'; // set opposite before toggle to switch properly
+            toggleLanguage();
+        }
+
+        const savedTheme = localStorage.getItem('wr_policy_theme') || 'dark';
+        if (savedTheme !== 'dark') {
+            currentTheme = 'dark';
+            toggleTheme();
+        }
+    });
+</script>
+
+</body>
+</html>
