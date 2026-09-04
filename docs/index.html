@@ -542,11 +542,11 @@
             <dl class="facts">
                 <div>
                     <dt>App</dt>
-                    <dd>Workout Roulette<br><code>com.saedcsoftware.WorkoutRoulette</code></dd>
+                    <dd>Workout Roulette (Mixify / نوّع)<br><code>com.saedcsoftware.WorkoutRoulette (v2.3.0)</code></dd>
                 </div>
                 <div>
                     <dt>Last updated</dt>
-                    <dd>17 July 2026</dd>
+                    <dd>4 September 2026</dd>
                 </div>
                 <div>
                     <dt>Account needed</dt>
@@ -561,11 +561,12 @@
                 <ol>
                     <li><a href="#en-s1">The short version</a></li>
                     <li><a href="#en-s2">Health Connect</a></li>
-                    <li><a href="#en-s3">Drive backup</a></li>
-                    <li><a href="#en-s4">Where data lives</a></li>
-                    <li><a href="#en-s5">App statistics</a></li>
-                    <li><a href="#en-s6">Children</a></li>
-                    <li><a href="#en-s7">Questions</a></li>
+                    <li><a href="#en-s3">Device notifications</a></li>
+                    <li><a href="#en-s4">Drive backup</a></li>
+                    <li><a href="#en-s5">Where data lives</a></li>
+                    <li><a href="#en-s6">App statistics</a></li>
+                    <li><a href="#en-s7">Children</a></li>
+                    <li><a href="#en-s8">Questions</a></li>
                 </ol>
             </nav>
 
@@ -574,14 +575,14 @@
                     <div class="doc-section__no">01</div>
                     <div>
                         <h2>The short version</h2>
-                        <p>Workout Roulette (also called <em>نوّع / Mixify</em>) saves your workouts, plans, and settings on your phone. You don't create an account, and we never see what you train.</p>
+                        <p>Workout Roulette (also called <em>نوّع / Mixify</em>) saves your workouts, custom plans, and settings on your phone. You don't create an account, and we never see what you train.</p>
                         <p>There are only three times data goes anywhere else, and each one is explained below:</p>
                         <ul>
-                            <li><strong>Health Connect</strong> — only if you turn it on, so finished workouts show up with the rest of your health data.</li>
-                            <li><strong>Google Drive backup</strong> — only if you turn it on, and the backup goes to your own Drive, not to us.</li>
+                            <li><strong>Health Connect</strong> — only if you turn it on, so completed workouts show up with the rest of your health data.</li>
+                            <li><strong>Google Drive backup</strong> — only if you turn it on, and the backup goes to your own personal Google Drive, not to us.</li>
                             <li><strong>Anonymous statistics</strong> — crash reports and basic usage numbers that don't identify you.</li>
                         </ul>
-                        <p>We don't sell your data, and we don't share it with advertisers.</p>
+                        <p>Reminders and rest timers run entirely on your device. We do not sell your data, and we do not share it with advertisers or data brokers.</p>
                     </div>
                 </section>
 
@@ -589,15 +590,15 @@
                     <div class="doc-section__no">02</div>
                     <div>
                         <h2>Syncing with Health Connect</h2>
-                        <p>Health Connect is the place where Android keeps your health and fitness data in one spot. If you allow it, Workout Roulette can add your finished workouts there so they sit next to your steps, sleep, and everything else.</p>
-                        <p>This is your choice. If you skip it, the app works exactly the same.</p>
+                        <p>Health Connect is Android's centralized hub for health and fitness data. If you choose to enable it, Workout Roulette can record your completed workout sessions there so they appear alongside your daily activity, steps, and recovery metrics.</p>
+                        <p>This integration is completely optional. If you skip it, the app works exactly the same.</p>
                         <div class="note">
-                            <strong>What we can and can't do with it</strong>
+                            <strong>What we can and cannot do</strong>
                             <ul>
-                                <li>We ask for <strong>one permission only</strong> (<code>WRITE_EXERCISE</code>). It lets the app add and update finished workouts — nothing more.</li>
-                                <li>We <strong>can't read</strong> anything from Health Connect. Your steps, heart rate, weight, and sleep are invisible to us.</li>
-                                <li>Nothing from Health Connect is copied to our servers, sold, or shared with advertisers or data companies.</li>
-                                <li>We follow Google's rules for health data, the <a href="https://support.google.com/googleplay/android-developer/answer/9888170" target="_blank" rel="noopener">Google Play Limited Use policy</a>.</li>
+                                <li>We ask for <strong>one permission only</strong> (<code>WRITE_EXERCISE</code>). This permits the app to write and update completed workout session records (<code>ExerciseSessionRecord</code>) — nothing more.</li>
+                                <li>We <strong>cannot read</strong> anything from Health Connect. Your steps, heart rate, sleep, weight, and other fitness records are completely inaccessible to us.</li>
+                                <li>Nothing from Health Connect is transferred to external servers, sold, or shared with advertisers or third parties.</li>
+                                <li>Our use of Health Connect data strictly adheres to the <a href="https://support.google.com/googleplay/android-developer/answer/9888170" target="_blank" rel="noopener">Google Play Health Connect &amp; Limited Use policy</a>.</li>
                             </ul>
                         </div>
                     </div>
@@ -606,13 +607,13 @@
                 <section class="doc-section" id="en-s3">
                     <div class="doc-section__no">03</div>
                     <div>
-                        <h2>Backing up to Google Drive (optional)</h2>
-                        <p>Changing phones, or worried about losing months of progress? You can save a backup to your own Google account and restore it later. This is off until you switch it on.</p>
+                        <h2>Device notifications &amp; timers</h2>
+                        <p>Workout Roulette requests notification access (<code>POST_NOTIFICATIONS</code>) to deliver helpful, local training prompts:</p>
                         <ul>
-                            <li><strong>The app gets a locked drawer, not your whole Drive.</strong> It can only use a private folder that belongs to it (<code>drive.appdata</code>). Your photos, documents, and other files stay out of reach.</li>
-                            <li><strong>The backup is yours.</strong> It sits in your Google Drive, not on our servers. We can't open it, download it, or delete it.</li>
-                            <li><strong>We never see your Google password.</strong> Signing in happens through Google itself.</li>
-                            <li><strong>You can stop any time.</strong> Turn the feature off, or delete the app's data from your Drive settings.</li>
+                            <li><strong>Daily workout reminders:</strong> A local notification (defaulting to 6:00 PM or your chosen time) prompts you to stay consistent. It is suppressed automatically on days you have already logged a session.</li>
+                            <li><strong>Rest timer cues:</strong> Gentle audio and haptic feedback alert you when your rest period between sets has elapsed.</li>
+                            <li><strong>100% on-device:</strong> All scheduling and notifications execute strictly within your phone's Android operating system. No notification content, scheduling data, or interaction history is ever sent to external servers.</li>
+                            <li><strong>Full user control:</strong> You can adjust the reminder time or disable notifications at any time in the app's Settings or your Android System Settings.</li>
                         </ul>
                     </div>
                 </section>
@@ -620,43 +621,57 @@
                 <section class="doc-section" id="en-s4">
                     <div class="doc-section__no">04</div>
                     <div>
-                        <h2>Where your data lives</h2>
-                        <p>Your workout history, saved plans, favorites, timers, and settings are kept in the app's own private storage on your phone. Other apps can't open it, and it never gets uploaded on its own.</p>
-                        <p>Want it all gone? You have two ways, and both work instantly:</p>
+                        <h2>Backing up to Google Drive (optional)</h2>
+                        <p>Changing phones, or worried about losing months of training progress? You can save a backup to your own personal Google account and restore it later. This is disabled until you explicitly turn it on.</p>
                         <ul>
-                            <li>Clear the app's data from <strong>Settings → Clear app data</strong> (in the app, or in your phone's settings).</li>
-                            <li>Uninstall the app.</li>
+                            <li><strong>The app gets a locked drawer, not your whole Drive.</strong> It can only access a hidden, private folder dedicated solely to this app (<code>drive.appdata</code>). Your personal documents, photos, and files are completely unreachable.</li>
+                            <li><strong>The backup is strictly yours.</strong> Backup files reside in your personal Google Drive storage, not on developer servers. We cannot view, download, or delete your files.</li>
+                            <li><strong>We never see your Google credentials.</strong> Authentication is handled directly and securely by Google Play Services.</li>
+                            <li><strong>You can revoke access anytime.</strong> Turn off the backup feature in Settings, or delete the app's saved data from your Google Drive account settings.</li>
                         </ul>
-                        <p>Once you do that, there is no copy left anywhere else — unless you made a Drive backup yourself.</p>
                     </div>
                 </section>
 
                 <section class="doc-section" id="en-s5">
                     <div class="doc-section__no">05</div>
                     <div>
-                        <h2>App statistics</h2>
-                        <p>We use <strong>Google Firebase</strong> to find out when the app crashes and which parts people struggle with. The numbers arrive anonymously — we see totals, not people.</p>
+                        <h2>Where your data lives</h2>
+                        <p>Your complete training logs—including workout history, custom plans, per-set weights and reps, exercise notes, progressive overload targets, 2D anatomical muscle volume distributions, custom timers, and preferences—are stored inside the app's secure private sandbox on your phone (Room database and encrypted DataStore). Other applications cannot access this data, and it is never uploaded automatically.</p>
+                        <p>Want it all deleted? You have two instant options:</p>
                         <ul>
-                            <li><strong>What we see:</strong> your phone model, your Android version, the app version, crash reports, and general counts such as how often the wheel gets spun.</li>
-                            <li><strong>What we don't see:</strong> your name, your email, your notes, your workout history, or anything about your health.</li>
+                            <li>Clear all data via <strong>Settings → Clear app data</strong> inside the app (or in your phone's Android App Settings).</li>
+                            <li>Uninstall the application from your device.</li>
                         </ul>
+                        <p>Once cleared, no trace remains on your phone or on any server—unless you created a Google Drive cloud backup yourself.</p>
                     </div>
                 </section>
 
                 <section class="doc-section" id="en-s6">
                     <div class="doc-section__no">06</div>
                     <div>
-                        <h2>Children</h2>
-                        <p>The app is made for general fitness use, not for kids. We don't knowingly collect anything from children under 13. If a child used the app on your phone, clearing the app's data removes everything they logged.</p>
+                        <h2>App statistics &amp; diagnostics</h2>
+                        <p>We use <strong>Google Firebase</strong> (Crashlytics &amp; Analytics) to diagnose application crashes, measure stability, and understand aggregate feature adoption. All diagnostics are completely anonymous:</p>
+                        <ul>
+                            <li><strong>What we see:</strong> Device model, Android OS version, application version, crash stack traces, and anonymous aggregate counts (such as total roulette spins or sessions completed).</li>
+                            <li><strong>What we never see:</strong> Your name, email, workout notes, lift numbers, training history, or any health metrics.</li>
+                        </ul>
                     </div>
                 </section>
 
                 <section class="doc-section" id="en-s7">
                     <div class="doc-section__no">07</div>
                     <div>
+                        <h2>Children</h2>
+                        <p>Workout Roulette is designed for general fitness enthusiasts and is not directed at children under the age of 13. We do not knowingly collect personal or health information from children. If a child logs data on your phone, clearing the app's data wipes everything immediately.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section" id="en-s8">
+                    <div class="doc-section__no">08</div>
+                    <div>
                         <h2>Questions and updates</h2>
-                        <p>When the app gains a feature that touches your data, we'll update this page and change the date at the top. It's worth a quick look after a big update.</p>
-                        <p>If something here isn't clear, or you want to know what the app stores about you, just write to us. A real person reads it.</p>
+                        <p>When the app introduces new capabilities that interact with device data, we will update this document and adjust the revision date above.</p>
+                        <p>If you have any questions or feedback regarding our privacy practices or data handling, reach out directly to our engineering team:</p>
                         <div class="contact">
                             <div class="row">
                                 <span>Email</span>
@@ -682,11 +697,11 @@
             <dl class="facts">
                 <div>
                     <dt>التطبيق</dt>
-                    <dd>Workout Roulette (نوّع / Mixify)<br><code>com.saedcsoftware.WorkoutRoulette</code></dd>
+                    <dd>Workout Roulette (نوّع / Mixify)<br><code>com.saedcsoftware.WorkoutRoulette (v2.3.0)</code></dd>
                 </div>
                 <div>
                     <dt>آخر تحديث</dt>
-                    <dd>١٧ يوليو ٢٠٢٦</dd>
+                    <dd>٤ سبتمبر ٢٠٢٦</dd>
                 </div>
                 <div>
                     <dt>هل تحتاج حساباً؟</dt>
@@ -701,11 +716,12 @@
                 <ol>
                     <li><a href="#ar-s1">باختصار</a></li>
                     <li><a href="#ar-s2">Health Connect</a></li>
-                    <li><a href="#ar-s3">النسخ الاحتياطي</a></li>
-                    <li><a href="#ar-s4">أين تُحفظ بياناتك</a></li>
-                    <li><a href="#ar-s5">إحصاءات التطبيق</a></li>
-                    <li><a href="#ar-s6">الأطفال</a></li>
-                    <li><a href="#ar-s7">أسئلتك</a></li>
+                    <li><a href="#ar-s3">إشعارات الهاتف</a></li>
+                    <li><a href="#ar-s4">النسخ الاحتياطي</a></li>
+                    <li><a href="#ar-s5">أين تُحفظ بياناتك</a></li>
+                    <li><a href="#ar-s6">إحصاءات التطبيق</a></li>
+                    <li><a href="#ar-s7">الأطفال</a></li>
+                    <li><a href="#ar-s8">أسئلتك</a></li>
                 </ol>
             </nav>
 
@@ -714,14 +730,14 @@
                     <div class="doc-section__no">٠١</div>
                     <div>
                         <h2>باختصار</h2>
-                        <p>تطبيق <strong>Workout Roulette</strong> (أو <em>نوّع / Mixify</em>) يحفظ تمارينك وخططك وإعداداتك على هاتفك. لا تحتاج إلى إنشاء حساب، ونحن لا نرى ماذا تتمرّن.</p>
-                        <p>هناك ثلاث حالات فقط تخرج فيها بيانات إلى مكان آخر، وكل واحدة مشروحة بالتفصيل تحت:</p>
+                        <p>تطبيق <strong>Workout Roulette</strong> (أو <em>نوّع / Mixify</em>) يحفظ تمارينك وخططك التدريبية وإعداداتك على هاتفك. لا تحتاج إلى إنشاء حساب، ونحن لا نرى ماذا تتمرّن.</p>
+                        <p>هناك ثلاث حالات فقط تخرج فيها بيانات إلى مكان آخر، وكل واحدة مشروحة بالتفصيل أدناه:</p>
                         <ul>
-                            <li><strong>Health Connect</strong> — فقط إذا فعّلتها أنت، لتظهر تمارينك المنجزة مع بقية بياناتك الصحية.</li>
-                            <li><strong>نسخة احتياطية على Google Drive</strong> — فقط إذا فعّلتها أنت، وتذهب إلى حسابك أنت لا إلينا.</li>
-                            <li><strong>إحصاءات مجهولة</strong> — تقارير الأعطال وأرقام عامة عن الاستخدام، لا تدل عليك.</li>
+                            <li><strong>Health Connect</strong> — فقط إذا فعّلتها بنفسك، لتظهر تمارينك المكتملة مع بقية بياناتك الصحية.</li>
+                            <li><strong>نسخة احتياطية على Google Drive</strong> — فقط إذا اخترت تفعيلها، وتُحفظ في حسابك الشخصي لا لدينا.</li>
+                            <li><strong>إحصاءات مجهولة</strong> — تقارير الأعطال البرمجية وأرقام عامة عن الاستخدام، دون أي بيانات تدل على هويتك.</li>
                         </ul>
-                        <p>نحن لا نبيع بياناتك، ولا نشاركها مع المعلنين.</p>
+                        <p>التذكيرات ومؤقتات الراحة تعمل محلياً بالكامل على هاتفك. نحن لا نبيع بياناتك، ولا نشاركها مطلقاً مع أي معلنين أو وسطاء.</p>
                     </div>
                 </section>
 
@@ -729,15 +745,15 @@
                     <div class="doc-section__no">٠٢</div>
                     <div>
                         <h2>المزامنة مع Health Connect</h2>
-                        <p>خدمة Health Connect هي المكان الذي يجمع فيه نظام Android بياناتك الصحية كلها. إذا سمحت للتطبيق، يستطيع إضافة تمارينك المنجزة هناك لتظهر بجانب خطواتك ونومك وبقية بياناتك.</p>
-                        <p>هذا خيارك أنت. وإذا تجاهلته، سيعمل التطبيق كما هو تماماً.</p>
+                        <p>خدمة Health Connect هي المنصة المركزية التي يجمع فيها نظام Android بيانات الصحة واللياقة البدنية. إذا اخترت تفعيل الميزة، يستطيع التطبيق إضافة تمارينك المنجزة تلقائياً لتظهر بجانب خطواتك ونومك وبقية مؤشراتك الحيوية.</p>
+                        <p>هذا التكامل اختياري تماماً. وإذا قررت عدم تفعيله، سيعمل التطبيق بكامل وظائفه دون أي اختلاف.</p>
                         <div class="note">
                             <strong>ما الذي نستطيع فعله وما الذي لا نستطيع</strong>
                             <ul>
-                                <li>نطلب <strong>صلاحية واحدة فقط</strong> (<code>WRITE_EXERCISE</code>)، وهي تتيح للتطبيق إضافة وتحديث التمارين المنجزة، لا أكثر.</li>
-                                <li><strong>لا نستطيع قراءة</strong> أي شيء من Health Connect. خطواتك ونبضك ووزنك ونومك لا نراها إطلاقاً.</li>
-                                <li>لا يُنسخ أي شيء من Health Connect إلى خوادمنا، ولا يُباع، ولا يُشارك مع معلنين أو شركات بيانات.</li>
-                                <li>نلتزم بقواعد Google الخاصة بالبيانات الصحية، أي <a href="https://support.google.com/googleplay/android-developer/answer/9888170" target="_blank" rel="noopener">سياسة الاستخدام المحدود من Google Play</a>.</li>
+                                <li>نطلب <strong>صلاحية كتابة واحدة فقط</strong> (<code>WRITE_EXERCISE</code>)، وهي تتيح للتطبيق إضافة وتحديث سجلات التمارين المكتملة (<code>ExerciseSessionRecord</code>)، لا أكثر.</li>
+                                <li><strong>لا نستطيع قراءة أي شيء</strong> من Health Connect. خطواتك، نبضات قلبك، وزنك، ونومك غير مرئية لنا تماماً.</li>
+                                <li>لا تُنقل أي بيانات من Health Connect إلى خوادم خارجية، ولا تُباع، ولا تُشارك مع أي جهات إعلانية أو تجارية.</li>
+                                <li>نلتزم التزاماً صارماً بـ <a href="https://support.google.com/googleplay/android-developer/answer/9888170" target="_blank" rel="noopener">سياسة الاستخدام المحدود لبيانات الصحة من Google Play</a>.</li>
                             </ul>
                         </div>
                     </div>
@@ -746,13 +762,13 @@
                 <section class="doc-section" id="ar-s3">
                     <div class="doc-section__no">٠٣</div>
                     <div>
-                        <h2>النسخ الاحتياطي على Google Drive (اختياري)</h2>
-                        <p>هل ستغيّر هاتفك، أو تخشى أن تفقد تقدّم شهور من التمرين؟ يمكنك حفظ نسخة احتياطية في حساب Google الخاص بك واستعادتها لاحقاً. هذه الميزة مغلقة حتى تشغّلها بنفسك.</p>
+                        <h2>إشعارات الهاتف ومؤقتات التمرين</h2>
+                        <p>يطلب التطبيق إذن الإشعارات (<code>POST_NOTIFICATIONS</code>) لتقديم تذكيرات تدريبية مفيدة ومحلية فقط:</p>
                         <ul>
-                            <li><strong>يحصل التطبيق على درج مقفل، لا على Drive كله.</strong> لا يستطيع استخدام سوى مجلد خاص به وحده (<code>drive.appdata</code>)، أما صورك ومستنداتك وملفاتك الأخرى فتبقى بعيدة عن متناوله.</li>
-                            <li><strong>النسخة ملكك أنت.</strong> إنها في Google Drive الخاص بك، لا على خوادمنا. لا نستطيع فتحها ولا تنزيلها ولا حذفها.</li>
-                            <li><strong>لا نرى كلمة مرور حسابك أبداً.</strong> تسجيل الدخول يتم عبر Google نفسها.</li>
-                            <li><strong>تستطيع التراجع في أي وقت.</strong> أوقف الميزة، أو احذف بيانات التطبيق من إعدادات Drive.</li>
+                            <li><strong>تذكير يومي بالتدريب:</strong> إشعار محلي (افتراضياً في الساعة 6:00 مساءً أو في الوقت الذي تحدده) يساعدك على الالتزام. يتوقف التذكير تلقائياً في الأيام التي سجلت فيها تمريناً بالفعل.</li>
+                            <li><strong>تنبيهات مؤقت الراحة:</strong> إشعارات صوتية واهتزازات تفاعلية لطيفة تنبهك بانتهاء فترة الراحة بين الجولات.</li>
+                            <li><strong>محلية على جهازك بنسبة 100%:</strong> تتم الجدولة وإطلاق الإشعارات بالكامل داخل نظام أندرويد على هاتفك. لا يتم إرسال أي تفاصيل أو مواعيد إلى أي خادم خارجي.</li>
+                            <li><strong>تحكم كامل:</strong> يمكنك تغيير وقت التذكير أو إيقاف الإشعارات تماماً في أي وقت من إعدادات التطبيق أو إعدادات النظام.</li>
                         </ul>
                     </div>
                 </section>
@@ -760,43 +776,57 @@
                 <section class="doc-section" id="ar-s4">
                     <div class="doc-section__no">٠٤</div>
                     <div>
-                        <h2>أين تُحفظ بياناتك</h2>
-                        <p>سجل تمارينك، وخططك المحفوظة، ومفضلاتك، ومؤقتاتك، وإعداداتك، كلها محفوظة في مساحة التطبيق الخاصة داخل هاتفك. لا تستطيع التطبيقات الأخرى فتحها، ولا تُرفع إلى أي مكان من تلقاء نفسها.</p>
-                        <p>وإذا أردت حذف كل شيء، أمامك طريقتان، وكلتاهما فورية:</p>
+                        <h2>النسخ الاحتياطي على Google Drive (اختياري)</h2>
+                        <p>هل تخطط لتغيير هاتفك أو تخشى فقدان تقدمك في التمارين؟ يمكنك حفظ نسخة احتياطية مشفرة في حساب Google الشخصي الخاص بك واستعادتها لاحقاً. هذه الميزة معطلة حتى تشغّلها بنفسك.</p>
                         <ul>
-                            <li>امسح بيانات التطبيق من <strong>الإعدادات ← مسح بيانات التطبيق</strong> (من داخل التطبيق أو من إعدادات هاتفك).</li>
-                            <li>احذف التطبيق من جهازك.</li>
+                            <li><strong>يحصل التطبيق على درج مقفل، لا على Drive كله.</strong> لا يستطيع التطبيق استخدام سوى مجلد بيانات مخفي ومعزول خاص به (<code>drive.appdata</code>)، وتبقى مستنداتك وصورك وملفاتك الأخرى بعيدة تماماً عن متناوله.</li>
+                            <li><strong>النسخة ملكك أنت وحدك.</strong> تُحفظ الملفات في مساحة Google Drive الخاصة بك وليس على خوادم المطورين. لا يمكننا فتحها أو تنزيلها أو تعديلها.</li>
+                            <li><strong>لا نرى كلمة مرور حسابك أبداً.</strong> تسجيل الدخول وتفويض الصلاحيات يتم بأمان تام عبر خدمات Google Play.</li>
+                            <li><strong>يمكنك إلغاء الوصول متى شئت.</strong> أوقف ميزة النسخ الاحتياطي من الإعدادات، أو احذف بيانات التطبيق من إدارة حساب Google.</li>
                         </ul>
-                        <p>بعدها لن تبقى أي نسخة في أي مكان آخر — إلا إذا كنت قد أنشأت نسخة احتياطية على Drive بنفسك.</p>
                     </div>
                 </section>
 
                 <section class="doc-section" id="ar-s5">
                     <div class="doc-section__no">٠٥</div>
                     <div>
-                        <h2>إحصاءات التطبيق</h2>
-                        <p>نستخدم خدمة <strong>Google Firebase</strong> لنعرف متى يتوقف التطبيق فجأة، وأي جزء منه يربك المستخدمين. تصلنا هذه الأرقام مجهولة المصدر — نرى مجاميع، لا أشخاصاً.</p>
+                        <h2>أين تُحفظ بياناتك</h2>
+                        <p>سجل تدريباتك الكامل — بما في ذلك تاريخ التمارين، والخطط المخصصة، وأوزان وعدات كل جولة، والملاحظات التدريبية وضبط الأجهزة، وأهداف الزيادة التدريجية الذكية، وتوزيع الأحجام العضلية في الخريطة الحرارية، والمؤقتات، والإعدادات — محفوظ داخل المساحة الآمنة المعزولة للتطبيق على هاتفك (قواعد بيانات Room و DataStore المشفرة محلياً). لا يمكن للتطبيقات الأخرى الوصول إليها، ولا تُرفع إلى أي مكان تلقائياً.</p>
+                        <p>إذا أردت حذف جميع بياناتك نهائياً، أمامك طريقتان فوريتان:</p>
                         <ul>
-                            <li><strong>ما نراه:</strong> طراز هاتفك، وإصدار Android لديك، وإصدار التطبيق، وتقارير الأعطال، وأرقام عامة مثل عدد مرات تدوير العجلة.</li>
-                            <li><strong>ما لا نراه:</strong> اسمك، أو بريدك، أو ملاحظاتك، أو سجل تمارينك، أو أي شيء عن صحتك.</li>
+                            <li>مسح بيانات التطبيق من <strong>الإعدادات ← مسح بيانات التطبيق</strong> (أو من إعدادات التطبيقات بنظام Android).</li>
+                            <li>إلغاء تثبيت التطبيق من جهازك.</li>
                         </ul>
+                        <p>بعد الحذف لا تبقى أي نسخة في أي مكان — إلا إذا كنت قد أنشأت نسخة احتياطية بنفسك على Google Drive.</p>
                     </div>
                 </section>
 
                 <section class="doc-section" id="ar-s6">
                     <div class="doc-section__no">٠٦</div>
                     <div>
-                        <h2>الأطفال</h2>
-                        <p>التطبيق موجّه للاستخدام الرياضي العام، وليس للأطفال. ونحن لا نجمع عن قصد أي معلومات من الأطفال دون سن ١٣ عاماً. وإذا استخدم طفل التطبيق على هاتفك، فإن مسح بيانات التطبيق يحذف كل ما سجّله.</p>
+                        <h2>إحصاءات التطبيق وبيانات التشخيص</h2>
+                        <p>نستخدم خدمة <strong>Google Firebase</strong> (Crashlytics و Analytics) لمعرفة أسباب توقف التطبيق فجأة، وقياس استقراره، وفهم مدى التفاعل العام مع الميزات. تصلنا هذه الأرقام بشكل مجهول الهوية تماماً:</p>
+                        <ul>
+                            <li><strong>ما نراه:</strong> طراز هاتفك، وإصدار Android، ورقم إصدار التطبيق، وسجلات الأخطاء البرمجية المجهولة، وإحصاءات إجمالية عامة (مثل إجمالي تدوير عجلة الروليت أو عدد الجلسات المكتملة).</li>
+                            <li><strong>ما لا نراه مطلقاً:</strong> اسمك، أو بريدك الإلكتروني، أو ملاحظاتك التدريبية، أو أوزانك، أو سجل تمارينك، أو أي بيانات صحية شخصية.</li>
+                        </ul>
                     </div>
                 </section>
 
                 <section class="doc-section" id="ar-s7">
                     <div class="doc-section__no">٠٧</div>
                     <div>
+                        <h2>الأطفال</h2>
+                        <p>التطبيق مصمم للاستخدام الرياضي العام ولعشاق اللياقة، وليس موجهاً للأطفال دون سن 13 عاماً. ونحن لا نجمع عن قصد أي معلومات من الأطفال. وفي حال استخدم طفل التطبيق على جهازك، فإن مسح بيانات التطبيق يحذف كل ما تم تسجيله فوراً.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section" id="ar-s8">
+                    <div class="doc-section__no">٠٨</div>
+                    <div>
                         <h2>أسئلتك وتحديثات هذه الصفحة</h2>
-                        <p>عندما تُضاف ميزة جديدة تمسّ بياناتك، سنحدّث هذه الصفحة ونغيّر التاريخ في الأعلى. تستحق نظرة سريعة بعد كل تحديث كبير.</p>
-                        <p>وإذا لم يكن شيء هنا واضحاً، أو أردت أن تعرف ما الذي يحفظه التطبيق عنك، راسلنا ببساطة. يقرأ رسالتك شخص حقيقي.</p>
+                        <p>عندما تُضاف أي ميزة جديدة تتعامل مع بياناتك أو أذونات الجهاز، سنقوم بتحديث هذه الصفحة وتعديل تاريخ المراجعة في الأعلى.</p>
+                        <p>إذا كان لديك أي استفسار أو اقتراح بخصوص ممارسات الخصوصية وحماية البيانات في التطبيق، يمكنك مراسلة فريق التطوير مباشرة:</p>
                         <div class="contact">
                             <div class="row">
                                 <span>البريد الإلكتروني</span>
