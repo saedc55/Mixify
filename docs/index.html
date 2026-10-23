@@ -645,11 +645,11 @@
             <dl class="facts">
                 <div>
                     <dt>App</dt>
-                    <dd>Workout Roulette (Mixify / نوّع)<br>Version 2.3.0<br><a href="https://play.google.com/store/apps/details?id=com.saedcsoftware.WorkoutRoulette" target="_blank" rel="noopener" style="font-size: 0.8125rem;">Download on Google Play →</a></dd>
+                    <dd>Workout Roulette (Mixify / نوّع)<br>Version 2.7.0<br><a href="https://play.google.com/store/apps/details?id=com.saedcsoftware.WorkoutRoulette" target="_blank" rel="noopener" style="font-size: 0.8125rem;">Download on Google Play →</a></dd>
                 </div>
                 <div>
                     <dt>Last updated</dt>
-                    <dd>4 September 2026</dd>
+                    <dd>23 October 2026</dd>
                 </div>
                 <div>
                     <dt>Account needed</dt>
@@ -683,7 +683,7 @@
                         <ul>
                             <li><strong>Health Connect</strong> — only if you turn it on, so completed workouts show up with the rest of your health data.</li>
                             <li><strong>Google Drive backup</strong> — only if you turn it on, and the backup goes to your own personal Google Drive, not to us.</li>
-                            <li><strong>Anonymous statistics</strong> — crash reports and basic usage numbers that don't identify you.</li>
+                            <li><strong>Anonymous statistics</strong> — basic feature usage numbers and interaction telemetry that don't identify you.</li>
                         </ul>
                         <p>Reminders and rest timers run entirely on your device. We do not sell your data, and we do not share it with advertisers or data brokers.</p>
                     </div>
@@ -715,7 +715,7 @@
                         <ul>
                             <li><strong>Daily workout reminders:</strong> A local notification (defaulting to 6:00 PM or your chosen time) prompts you to stay consistent. It is suppressed automatically on days you have already logged a session.</li>
                             <li><strong>Rest timer cues:</strong> Gentle audio and haptic feedback alert you when your rest period between sets has elapsed.</li>
-                            <li><strong>100% on-device:</strong> All scheduling and notifications execute strictly within your phone's Android operating system. No notification content, scheduling data, or interaction history is ever sent to external servers.</li>
+                            <li><strong>Scheduled on-device:</strong> All notifications and alarms are scheduled and executed locally by the Android operating system on your phone. Your reminder times and schedule never leave the device. The only exception is that the app records when a reminder is shown or opened (together with the reminder type) as part of the anonymous telemetry described in Section 06.</li>
                             <li><strong>Full user control:</strong> You can adjust the reminder time or disable notifications at any time in the app's Settings or your Android System Settings.</li>
                         </ul>
                     </div>
@@ -753,10 +753,11 @@
                     <div class="doc-section__no">06</div>
                     <div>
                         <h2>App statistics &amp; diagnostics</h2>
-                        <p>We use <strong>Google Firebase</strong> (Crashlytics &amp; Analytics) to diagnose application crashes, measure stability, and understand aggregate feature adoption. All diagnostics are completely anonymous:</p>
+                        <p>To ensure app stability and continuously improve user experience, we integrate <strong>Google Firebase Analytics</strong> to collect anonymous, non-personally identifiable technical telemetry:</p>
                         <ul>
-                            <li><strong>What we see:</strong> Device model, Android OS version, application version, crash stack traces, and anonymous aggregate counts (such as total roulette spins or sessions completed).</li>
-                            <li><strong>What we never see:</strong> Your name, email, workout notes, lift numbers, training history, or any health metrics.</li>
+                            <li><strong>What may be collected:</strong> Device model, Android OS version, app version, and general feature interaction statistics (e.g., aggregate roulette spin counts, and whether a workout reminder was shown or opened).</li>
+                            <li><strong>Device identifiers:</strong> Firebase Analytics may use an app-instance ID and, where your device allows it, the Android Advertising ID to count and group these events. You can reset or delete the Advertising ID in your device's Android settings.</li>
+                            <li><strong>What we never see:</strong> These metrics do not include your name, email, workout notes, lift numbers, training history, or any health metrics.</li>
                         </ul>
                     </div>
                 </section>
@@ -810,11 +811,11 @@
             <dl class="facts">
                 <div>
                     <dt>التطبيق</dt>
-                    <dd>Workout Roulette (نوّع / Mixify)<br>الإصدار 2.3.0<br><a href="https://play.google.com/store/apps/details?id=com.saedcsoftware.WorkoutRoulette" target="_blank" rel="noopener" style="font-size: 0.8125rem;">تنزيل التطبيق من Google Play ←</a></dd>
+                    <dd>Workout Roulette (نوّع / Mixify)<br>الإصدار 2.7.0<br><a href="https://play.google.com/store/apps/details?id=com.saedcsoftware.WorkoutRoulette" target="_blank" rel="noopener" style="font-size: 0.8125rem;">تنزيل التطبيق من Google Play ←</a></dd>
                 </div>
                 <div>
                     <dt>آخر تحديث</dt>
-                    <dd>٤ سبتمبر ٢٠٢٦</dd>
+                    <dd>٢٣ أكتوبر ٢٠٢٦</dd>
                 </div>
                 <div>
                     <dt>هل تحتاج حساباً؟</dt>
@@ -848,7 +849,7 @@
                         <ul>
                             <li><strong>Health Connect</strong> — فقط إذا فعّلتها بنفسك، لتظهر تمارينك المكتملة مع بقية بياناتك الصحية.</li>
                             <li><strong>نسخة احتياطية على Google Drive</strong> — فقط إذا اخترت تفعيلها، وتُحفظ في حسابك الشخصي لا لدينا.</li>
-                            <li><strong>إحصاءات مجهولة</strong> — تقارير الأعطال البرمجية وأرقام عامة عن الاستخدام، دون أي بيانات تدل على هويتك.</li>
+                            <li><strong>إحصاءات مجهولة</strong> — أرقام وإحصاءات عامة عن استخدام الميزات، دون أي بيانات تدل على هويتك.</li>
                         </ul>
                         <p>التذكيرات ومؤقتات الراحة تعمل محلياً بالكامل على هاتفك. نحن لا نبيع بياناتك، ولا نشاركها مطلقاً مع أي معلنين أو وسطاء.</p>
                     </div>
@@ -880,7 +881,7 @@
                         <ul>
                             <li><strong>تذكير يومي بالتدريب:</strong> إشعار محلي (افتراضياً في الساعة 6:00 مساءً أو في الوقت الذي تحدده) يساعدك على الالتزام. يتوقف التذكير تلقائياً في الأيام التي سجلت فيها تمريناً بالفعل.</li>
                             <li><strong>تنبيهات مؤقت الراحة:</strong> إشعارات صوتية واهتزازات تفاعلية لطيفة تنبهك بانتهاء فترة الراحة بين الجولات.</li>
-                            <li><strong>محلية على جهازك بنسبة 100%:</strong> تتم الجدولة وإطلاق الإشعارات بالكامل داخل نظام أندرويد على هاتفك. لا يتم إرسال أي تفاصيل أو مواعيد إلى أي خادم خارجي.</li>
+                            <li><strong>جدولة محلية على جهازك:</strong> تتم جدولة الإشعارات وتشغيلها محلياً بواسطة نظام Android على هاتفك، ولا تخرج مواعيد التذكير أو جدولها من جهازك. الاستثناء الوحيد أن التطبيق يسجّل ظهور التذكير أو فتحه (مع نوع التذكير) ضمن التحليلات الموضحة في القسم ٠٦.</li>
                             <li><strong>تحكم كامل:</strong> يمكنك تغيير وقت التذكير أو إيقاف الإشعارات تماماً في أي وقت من إعدادات التطبيق أو إعدادات النظام.</li>
                         </ul>
                     </div>
@@ -918,10 +919,11 @@
                     <div class="doc-section__no">٠٦</div>
                     <div>
                         <h2>إحصاءات التطبيق وبيانات التشخيص</h2>
-                        <p>نستخدم خدمة <strong>Google Firebase</strong> (Crashlytics و Analytics) لمعرفة أسباب توقف التطبيق فجأة، وقياس استقراره، وفهم مدى التفاعل العام مع الميزات. تصلنا هذه الأرقام بشكل مجهول الهوية تماماً:</p>
+                        <p>لضمان استقرار التطبيق والتحسين المستمر لتجربة المستخدم، نستخدم خدمة <strong>Google Firebase Analytics</strong> لجمع بيانات إحصائية وتقنية مجهولة المصدر وغير محددة للهوية:</p>
                         <ul>
-                            <li><strong>ما نراه:</strong> طراز هاتفك، وإصدار Android، ورقم إصدار التطبيق، وسجلات الأخطاء البرمجية المجهولة، وإحصاءات إجمالية عامة (مثل إجمالي تدوير عجلة الروليت أو عدد الجلسات المكتملة).</li>
-                            <li><strong>ما لا نراه مطلقاً:</strong> اسمك، أو بريدك الإلكتروني، أو ملاحظاتك التدريبية، أو أوزانك، أو سجل تمارينك، أو أي بيانات صحية شخصية.</li>
+                            <li><strong>ما قد يتم جمعه:</strong> طراز الجهاز، إصدار نظام تشغيل Android، رقم إصدار التطبيق، وإحصاءات عامة مجهولة حول التفاعل مع الميزات (مثل معدل استخدام عجلة الروليت، وظهور تذكير التمرين أو فتحه).</li>
+                            <li><strong>معرّفات الجهاز:</strong> قد تستخدم خدمة Firebase Analytics معرّفاً خاصاً بنسخة التطبيق، ومعرّف الإعلانات في Android إن كان جهازك يسمح بذلك، لإحصاء هذه الأحداث وتجميعها. يمكنك إعادة تعيين معرّف الإعلانات أو حذفه من إعدادات Android في جهازك.</li>
+                            <li><strong>لا توجد بيانات شخصية:</strong> هذه التحليلات لا تتضمن اسمك، أو بريدك الإلكتروني، أو ملاحظاتك التدريبية، أو أوزانك وعداتك، أو سجل تمارينك، أو أي معلومات صحية شخصية.</li>
                         </ul>
                     </div>
                 </section>
